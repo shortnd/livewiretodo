@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "fa5bdbec3965e8c8deab017a6d82670f",
     "packages": [
+        {
+            "name": "calebporzio/livewire",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:calebporzio/livewire.git",
+                "reference": "3b27831fcfb579366552084c0bf2df7eb9df1d83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/livewire/zipball/3b27831fcfb579366552084c0bf2df7eb9df1d83",
+                "reference": "3b27831fcfb579366552084c0bf2df7eb9df1d83",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.7",
+                "illuminate/validation": "^5.7"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.7",
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "^7.5",
+                "psy/psysh": "@stable"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ],
+                    "aliases": {
+                        "Livewire": "Livewire\\Livewire"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Livewire\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/",
+                    "App\\": "vendor/orchestra/testbench-core/laravel/app"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "Build and test rich client-side functionality: with only backend code.",
+            "support": {
+                "source": "https://github.com/calebporzio/livewire/tree/master",
+                "issues": "https://github.com/calebporzio/livewire/issues"
+            },
+            "time": "2019-07-23T19:53:42+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -4651,7 +4713,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "calebporzio/livewire": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
