@@ -19,5 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['prefix' => 'todos'], function () {
+    Route::get('public', 'TodoController@publicTodos')->name('todos.public');
+    Route::put('{todo}/public', 'TodoController@public')->name('todos.make-public');
+    Route::put('{todo}/completed', 'TodoController@completed')->name('todos.completed');
+});
 Route::resource('todos', 'TodoController');
 // Route::get('todos', 'TodoController@index');
